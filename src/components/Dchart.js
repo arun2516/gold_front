@@ -24,8 +24,7 @@ import { Line } from "react-chartjs-2"
 
 function Dchart(props){
     let {data1,data2,days}=props;
-    console.log(data1);
-    console.log(data2)
+   
     const data24={
         labels:days,
         datasets:[{
