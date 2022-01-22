@@ -3,6 +3,10 @@ import styled from 'styled-components'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import slider1 from "../images/slider-2 (1).jpg"
+import slider2 from "../images/slider-2 (2).jpg"
+import slider3 from "../images/slider-2 (3).jpg"
+import slider4 from "../images/slider-2 (4).jpg"
 
 
 function Imageslider() {
@@ -17,16 +21,16 @@ let settings = {
     return (
         <Carousel {...settings}>
             <Wrap>
-                <img src="https://media.istockphoto.com/photos/american-currency-dollar-and-gold-ingot-combinations-close-up-for-picture-id1285637350?b=1&k=20&m=1285637350&s=170667a&w=0&h=52Let5iZctI-FWVeOCvZCN5Bf_KzbO3vQ4rCxhNdR-o=" alt="gold-market"/>
+                <img src={slider1} alt="gold-market"/>
             </Wrap>
             <Wrap>
-                <img src="https://media.istockphoto.com/photos/double-explosure-with-businesss-charts-of-graph-and-rows-of-coins-for-picture-id1051617040?b=1&k=20&m=1051617040&s=170667a&w=0&h=p5AUoSgjGMTZRCSqx2aSxCbm3HQWA3wRBCB121nDxtc=" alt="gold-market"/>
+                <img src={slider2} alt="gold-market"/>
             </Wrap>
             <Wrap>
-                <img src="https://media.istockphoto.com/photos/global-gold-price-commodity-concept-picture-id891624642?b=1&k=20&m=891624642&s=170667a&w=0&h=vA8t5quM4Lu6w2tl2P_PequJHzFQNPVkfRliGtNiYII=" alt="gold-market"/>
+                <img src={slider3} alt="gold-market"/>
             </Wrap>
             <Wrap>
-                <img src="https://media.istockphoto.com/photos/window-display-of-jewelry-shop-picture-id482058527?b=1&k=20&m=482058527&s=170667a&w=0&h=AD2nwDBKwo0hUXgEvQDslsZmc_B5jVx2NU-rrduPhwE=" alt="gold-market"/>
+                <img src={slider4} alt="gold-market"/>
             </Wrap>
            
         </Carousel>

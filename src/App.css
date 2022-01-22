@@ -4,4 +4,38 @@
     margin:0;
     padding: 0;
 }
+.heading{
+    margin:30px
+}
+.infohome{
+    margin-top: 10px;
+}
 
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    
+    
+}
+.lcards{
+    width: 40%;
+    margin-right: 5px;
+    
+}
+.rcards{
+    width: 40%;
+    
+}
+.cardcontent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading_2{
+    margin-top:45px;
+    margin-left: 25px;
+}

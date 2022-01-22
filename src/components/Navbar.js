@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState } from 'react';
 import { Button } from './Button';
 import {Button2} from './Button2'
 import { Link } from 'react-router-dom';
@@ -9,13 +9,21 @@ const signin="Sign In";
 const signout="Sign Out"
 
 function Navbar() {
+  
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
   
- 
+  
 
   const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+
+  const closeMobileMenu=()=>setClick(false);
+
+  const closeMobileMenu1 = () => {
+    localStorage.removeItem('token');
+    window.location.reload();
+    setClick(false);
+  }
 
   const onMouseEnter = () => {
     if (window.innerWidth < 960) {
@@ -63,15 +71,7 @@ function Navbar() {
             </Link>
             {dropdown && <Dropdown />}
           </li>
-          <li className='nav-item'>
-            <Link
-              to='/products'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Products
-            </Link>
-          </li>
+         
           <li className='nav-item'>
             <Link
               to='/contact-us'
@@ -83,9 +83,9 @@ function Navbar() {
           </li>
           <li>
             {token?<Link
-              to='/login'
+              to='/'
               className='nav-links-mobile'
-              onClick={closeMobileMenu}>Sign Out</Link>:<Link
+              onClick={closeMobileMenu1}>Sign Out</Link>:<Link
               to='/login'
               className='nav-links-mobile'
               onClick={closeMobileMenu}>Sign In</Link>}

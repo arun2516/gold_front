@@ -1,22 +1,12 @@
 export const MenuItems = [
     {
-      title: 'Marketing',
-      path: '/marketing',
+      title: 'Gold Rate Calculator',
+      path: '/goldcalc',
       cName: 'dropdown-link'
     },
     {
-      title: 'Consulting',
-      path: '/consulting',
-      cName: 'dropdown-link'
-    },
-    {
-      title: 'Design',
-      path: '/design',
-      cName: 'dropdown-link'
-    },
-    {
-      title: 'Development',
-      path: '/development',
+      title: 'Model - Gold Invoice',
+      path: '/goldinv',
       cName: 'dropdown-link'
     }
   ];
