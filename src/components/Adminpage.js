@@ -39,7 +39,7 @@ function Adminpage() {
 
   const handlesubmit = async(event)=>{
     event.preventDefault();
-    const localToken = localStorage.getItem('token');
+    const localToken = localStorage.getItem('admintoken');
     var decodedToken = jwt_decode(localToken);
 
     if(decodedToken.exp*1000 <= Date.now()){
@@ -54,11 +54,13 @@ function Adminpage() {
         today:[carat24,carat22]
       },  {
         headers: {
-            token: localToken
+            admintoken: localToken
         }
     }
       )
-      if(response.data){
+      console.log(response.data);
+     
+      if(response.data._id){
         setnotify({isOpen:true,message:`New Price for ${state} is updated Successfully`,type:"success"})
       }
     }catch(err){

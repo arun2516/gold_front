@@ -9,6 +9,7 @@ const token = localStorage.getItem("token");
 
 function Navbar() {
   
+  
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
   
@@ -73,13 +74,14 @@ function Navbar() {
          
           <li className='nav-item'>
             <Link
-              to='/contact-us'
+              to='/contactus'
               className='nav-links'
               onClick={closeMobileMenu}
             >
               Contact Us
             </Link>
           </li>
+         
           <li>
             {token?<Link
               to='/'
@@ -94,6 +96,7 @@ function Navbar() {
         {token?<Button2/>:<Button/>}
         
       </nav>
+      
     </>
   );
 }

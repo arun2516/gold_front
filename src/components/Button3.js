@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export function Button3() {
  const removetoken =()=>{
-    localStorage.removeItem('token');
+    localStorage.removeItem('admintoken');
  }
   return (
     <Link to='/login'>

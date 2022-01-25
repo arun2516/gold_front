@@ -48,7 +48,7 @@ export default function Adminlogin() {
       console.log(response.data)
       if(response.data){
         seterror("");
-         await localStorage.setItem('token',response.data);
+         await localStorage.setItem('admintoken',response.data);
          history('/adminpage');
          window.location.reload();
       }

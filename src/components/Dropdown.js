@@ -2,11 +2,26 @@ import React, { useState } from 'react';
 import { MenuItems } from './MenuItems';
 import './Dropdown.css';
 import { Link } from 'react-router-dom';
+import jwt_decode from "jwt-decode";
+import {useNavigate} from "react-router-dom";
+import Notification from "./Notification";
 
 function Dropdown() {
+  
+  
+  
+  
+ 
+
+
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
+
+  const handleClick2 = ()=>{
+    
+    setClick(false);
+  }
 
   return (
     <>
@@ -20,7 +35,7 @@ function Dropdown() {
               <Link
                 className={item.cName}
                 to={item.path}
-                onClick={() => setClick(false)}
+                onClick={handleClick2}
               >
                 {item.title}
               </Link>
@@ -28,6 +43,7 @@ function Dropdown() {
           );
         })}
       </ul>
+      
     </>
   );
 }
