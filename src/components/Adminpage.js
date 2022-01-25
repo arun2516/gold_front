@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {Button3} from './Button3'
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import {Box, FormControl, MenuItem, InputLabel,Select, TextField,Stack, Button,} from '@mui/material'
+import {Box, FormControl, MenuItem, InputLabel,Select, TextField,Stack, Button,Breadcrumbs,Table, TableContainer, TableHead, TableRow, TableCell, TableBody,Paper,Typography} from '@mui/material'
 import './Navbar.css';
 import axios from 'axios';
 import jwt_decode from "jwt-decode";
 import Notificationadmin from './Notificationadmin';
 
 function Adminpage() {
+
   const[notify,setnotify] = useState({isOpen:false,message:'',type:''})
   const history = useNavigate();
     const[state,setstate]=useState("");
@@ -17,6 +18,18 @@ function Adminpage() {
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
     const closeMobileMenu=()=>setClick(false);
+    const[userdata,setuserdata] = useState([]);
+    const[enquirylist,setenquirylist]=useState([]);
+
+ 
+    useEffect(async()=>{
+      const response = await axios.get("http://localhost:3001/register/getuserdata");
+      setuserdata(response.data);
+      const response2 = await axios.get("http://localhost:3001/enquiry/getcontactus");
+      setenquirylist(response2.data);
+    },[])
+
+    console.log(userdata);
     
     const closeMobileMenu1 = () => {
     localStorage.removeItem('token');
@@ -75,7 +88,7 @@ function Adminpage() {
     <div>
         <nav className='navbar'>
         <Link to='/adminpage' className='navbar-logo' onClick={closeMobileMenu}>
-          Goldling Admin
+          Goldling
           <i class='fab fa-firstdraft' />
         </Link>
         <div className='menu-icon' onClick={handleClick}>
@@ -84,7 +97,7 @@ function Adminpage() {
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className='nav-item'>
             <Link to='/adminpage' className='nav-links' onClick={closeMobileMenu}>
-              Admin Dashboard
+              Admin-Dashboard
             </Link>
           </li>
           <li>
@@ -96,6 +109,10 @@ function Adminpage() {
         </ul>
       <Button3/>
       </nav>
+      <div className="heading">
+                <Breadcrumbs separator="›"><h5>Admin</h5><h5>Dashboard</h5></Breadcrumbs>
+                <h1>Update Today Gold Price</h1>
+            </div>
         <div className='goldinput'>
         <Box sx={{ width:"80%", marginTop:"5%" ,paddingLeft:"10%",marginLeft:"10%",  marginBottom:"5%"}}>
         <FormControl component="form" onSubmit={handlesubmit}  required>
@@ -160,6 +177,76 @@ function Adminpage() {
                 </FormControl>
         </Box>
         </div>
+
+        <div style={{marginTop:"20px"}}>
+          <h2 style={{marginLeft:"20px", marginBottom:"20px"}}>Enquiry lists</h2>
+          <div>
+          <Paper sx={{ width: '95%', overflow: 'hidden', marginLeft:"2.5%" , border:"2px solid black"}}>
+            <TableContainer sx={{ maxHeight: 440 }}>
+            <Table>
+              <TableHead>
+                <TableRow>
+                  <TableCell align="center">Name</TableCell>
+                  <TableCell align="center">Mobile-No</TableCell>
+                  <TableCell align="center">Email-Id</TableCell>
+                  <TableCell align="center">City</TableCell>
+                  <TableCell align="center">Message</TableCell>
+                  <TableCell align='center'>Assign</TableCell>
+                  <TableCell align='center'>Remove</TableCell>
+
+                </TableRow>
+              </TableHead>
+              <TableBody>
+               {enquirylist.map(enquiry=>{
+                 return(
+                   <TableRow key={enquiry._id}>
+                     <TableCell align="center">{enquiry.name}</TableCell>
+                     <TableCell align='center'>{enquiry.mobileno}</TableCell>
+                     <TableCell align="center">{enquiry.email}</TableCell>
+                     <TableCell align='center'>{enquiry.city}</TableCell>
+                     <TableCell align='center'><Typography>{enquiry.message}</Typography></TableCell>
+                     <TableCell align='center'><Button>Assign to Marketing Team</Button></TableCell>
+                     <TableCell align='center'><Button>Delete Enquiry</Button></TableCell>
+                   </TableRow>
+                 )
+               })}
+              </TableBody>
+            </Table>
+            </TableContainer>
+            </Paper>
+            </div>
+        </div>
+        
+        <div style={{marginBottom:"100px",marginTop:"30px"}}>
+          <h2 style={{marginLeft:"20px", marginBottom:"20px"}}>Registered Users In Goldling</h2>
+          <div>
+          <Paper sx={{ width: '80%', overflow: 'hidden', marginLeft:"10%" , border:"2px solid black"}}>
+            <TableContainer sx={{ maxHeight: 500 }}>
+            <Table stickyHeader>
+              <TableHead>
+                <TableRow>
+                  <TableCell align="center">User-Name</TableCell>
+                  <TableCell align="center">Email-Id</TableCell>
+                  <TableCell align='center'>Action</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+               {userdata.map(user=>{
+                 return(
+                   <TableRow hover key={user._id}>
+                     <TableCell  align="center">{user.username}</TableCell>
+                     <TableCell align="center">{user.email}</TableCell>
+                     <TableCell align='center'><Button variant="outlined">Send Promotion Email</Button></TableCell>
+                   </TableRow>
+                 )
+               })}
+              </TableBody>
+            </Table>
+            </TableContainer>
+            </Paper>
+            </div>
+        </div>
+        
         <Notificationadmin notify={notify} setnotify={setnotify}/>
     </div>
   ) 

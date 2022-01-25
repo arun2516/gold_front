@@ -42,8 +42,8 @@ export default function Contactus() {
    
     try{
       await axios.post('http://localhost:3001/enquiry/contactus',{
-        firstname:data.get('firstName'),
-        lastname:data.get('lastName'),
+        name:data.get('name'),
+        city:data.get('city'),
         mobileno:data.get('mobileno'),
         email:data.get('email'),
         message: data.get('message')
@@ -77,18 +77,18 @@ export default function Contactus() {
             Goldling
           </Typography>
           <Typography component="h1" variant="h6" color='goldenrod' fontFamily='Mochiy Pop P One' sx={{ mt: 1 }}>
-            Contact Us
+            Sell Your Gold
           </Typography>
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
                   autoComplete="given-name"
-                  name="firstName"
+                  name="name"
                   required
                   fullWidth
-                  id="firstName"
-                  label="First Name"
+                  id="name"
+                  label="Name"
                   autoFocus
                 />
               </Grid>
@@ -96,9 +96,9 @@ export default function Contactus() {
                 <TextField
                   required
                   fullWidth
-                  id="lastName"
-                  label="Last Name"
-                  name="lastName"
+                  id="city"
+                  label="City"
+                  name="city"
                   
                 />
               </Grid>
