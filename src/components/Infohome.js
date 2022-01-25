@@ -1,6 +1,6 @@
 import "../App.css"
 import { CardContent, Typography } from "@mui/material"
-import { Box, width } from "@mui/system"
+import { Box } from "@mui/system"
 import { Card } from "@mui/material"
 import React from "react"
 import getSymbolFromCurrency from 'currency-symbol-map';

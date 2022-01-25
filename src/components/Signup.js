@@ -38,7 +38,7 @@ export default function SignUp() {
     const data = new FormData(event.currentTarget);
    
     try{
-      var response = await axios.post('http://localhost:3001/register/signup',{
+      await axios.post('http://localhost:3001/register/signup',{
         firstname:data.get('firstName'),
         lastname:data.get('lastName'),
         username:data.get('username'),

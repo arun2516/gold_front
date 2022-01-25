@@ -1,6 +1,5 @@
 import * as React from 'react';
 import {useState} from 'react';
-import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 import Notification from "./Notification";
 import {Link,useParams,} from "react-router-dom"; 
@@ -32,7 +31,6 @@ const theme = createTheme();
 
 export default function Newpassword() {
   const[notify,setnotify] = useState({isOpen:false,message:'',type:''})
-  const history = useNavigate();
   const{token} = useParams();
   console.log(token);
   

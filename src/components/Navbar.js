@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Dropdown from './Dropdown';
 const token = localStorage.getItem("token");
-const signin="Sign In";
-const signout="Sign Out"
+
 
 function Navbar() {
   
@@ -63,7 +62,7 @@ function Navbar() {
             onMouseLeave={onMouseLeave}
           >
             <Link
-              to='/services'
+              to='/'
               className='nav-links'
               onClick={closeMobileMenu}
             >

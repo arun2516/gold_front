@@ -4,7 +4,6 @@ import axios from 'axios'
 import Imageslider from './Imageslider'
 import Navbar from './Navbar'
 import { Footercontainer } from './Footer/Footercontainer'
-import Dchart from './Dchart'
 import Infohome from './Infohome'
 
 

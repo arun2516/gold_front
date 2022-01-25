@@ -126,6 +126,12 @@ export default function Login() {
               >
                 Sign In
               </Button>
+              <div style={{display:"flex", justifyContent:"center", marginBottom:"12px"}}>
+              <Link to="/admin" style={{textDecoration:"none", color:"darkgreen"}} >
+              For Admin Sign In Click Here
+                  </Link>
+                  </div>
+             
               <Grid container>
                 <Grid item xs>
                   <Link to ="/forget" style={{textDecoration:"none", color:"red"}}>

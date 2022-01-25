@@ -7,11 +7,7 @@ import { Footercontainer } from "./Footer/Footercontainer";
 import Dchart2 from "./Dchart2";
 
 let inr = getSymbolFromCurrency('INR');
-const monthNames = ["January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December"
-];
-let today = new Date();
-let date = today.getDate()+"th"+ " "+monthNames[(today.getMonth())]+" "+today.getFullYear();
+
 
 function Goldcalculator(){
     const [res,setres]=useState([]);
