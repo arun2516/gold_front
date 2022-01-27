@@ -17,7 +17,7 @@ function Copyright(props) {
 
 export function Footercontainer(){
     return(
-        <Footer style={{position:'relative',top:'200px',}} >
+        <Footer style={{position:'relative',top:'400px',}} >
             <Footer.Wrapper>
                 <Footer.Row>
                 <Footer.Column>
@@ -28,7 +28,7 @@ export function Footercontainer(){
                 </Footer.Column>
                 <Footer.Column>
                     <Footer.Title>Services</Footer.Title>
-                    <Footer.Link href="#">Marketing</Footer.Link>
+                    <Footer.Link href="/">Marketing</Footer.Link>
                     <Footer.Link href="#">Consulting</Footer.Link>
                     <Footer.Link href="#">Development</Footer.Link>
                     <Footer.Link href="#">Design</Footer.Link>

@@ -6,7 +6,7 @@ export const MenuItems = [
     },
     {
       title: 'Sell Your Gold',
-      path: '/contactus',
+      path: '/sellgold',
       cName: 'dropdown-link'
     }
   ];

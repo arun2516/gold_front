@@ -9,6 +9,7 @@ import Goldcalculator from './components/Goldcalculator';
 import Adminlogin from './components/Adminlogin';
 import Adminpage from './components/Adminpage';
 import Contactus from './components/Contactus';
+import Sellgold from './components/Sellgold';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
        <Route path="/newpass/:token" element={<Newpassword/>}/>
        <Route path="/goldcalc" element={<Goldcalculator/>}/>
        <Route path="/contactus" element={<Contactus/>}/>
+       <Route path="/sellgold" element={<Sellgold/>}/>
     </Routes>
    </Router>
 
