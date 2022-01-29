@@ -132,11 +132,6 @@ export default function Login() {
                   </div>
              
               <Grid container>
-                <Grid item xs>
-                  <Link to ="/forget" style={{textDecoration:"none", color:"red"}}>
-                    Forgot password?
-                  </Link>
-                </Grid>
                 <Grid item>
                   <Link to="/signup" style={{textDecoration:"none", color:"blue"}} >
                     {"Don't have an account? Sign Up"}
