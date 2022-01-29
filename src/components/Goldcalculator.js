@@ -26,7 +26,7 @@ function Goldcalculator(){
 
     ///
     useEffect(async() => {
-        var response = await axios.get("http://localhost:3001/all/goldata");
+        var response = await axios.get("https://goldling.herokuapp.com/all/goldata");
         setres(response.data);
     }, [])
 

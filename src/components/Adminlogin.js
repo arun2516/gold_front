@@ -41,7 +41,7 @@ export default function Adminlogin() {
     const data = new FormData(event.currentTarget);
 
     try{
-      var response = await axios.post('http://localhost:3001/register/adminsignin',{
+      var response = await axios.post('https://goldling.herokuapp.com/register/adminsignin',{
         email:data.get('email'),
         password: data.get('password')
       })

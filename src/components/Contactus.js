@@ -41,7 +41,7 @@ export default function Contactus() {
     const data = new FormData(event.currentTarget);
    
     try{
-      await axios.post('http://localhost:3001/enquiry/contactus',{
+      await axios.post('https://goldling.herokuapp.com/enquiry/contactus',{
         name:data.get('name'),
         city:data.get('city'),
         mobileno:data.get('mobileno'),

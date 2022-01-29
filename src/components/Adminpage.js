@@ -21,7 +21,7 @@ function Adminpage() {
 
  
     useEffect(async()=>{
-      const response = await axios.get("http://localhost:3001/register/getuserdata");
+      const response = await axios.get("https://goldling.herokuapp.com/register/getuserdata");
       setuserdata(response.data);
      
     },[])
@@ -57,7 +57,7 @@ function Adminpage() {
     }
         
     try{
-      var response = await axios.put("http://localhost:3001/add/todayprice",
+      var response = await axios.put("https://goldling.herokuapp.com/add/todayprice",
       {
         state:state,
         today:[carat24,carat22]

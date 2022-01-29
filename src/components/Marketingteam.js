@@ -22,9 +22,9 @@ function Marketingteam() {
 
 
     useEffect(async()=>{
-      var response = await axios.get("http://localhost:3001/marketing/getmembers");
+      var response = await axios.get("https://goldling.herokuapp.com/marketing/getmembers");
       setteam(response.data)
-      const response2 = await axios.get("http://localhost:3001/contact/getassign");
+      const response2 = await axios.get("https://goldling.herokuapp.com/contact/getassign");
       setassign(response2.data)
     },[notify])
 
@@ -58,7 +58,7 @@ function Marketingteam() {
           data.append('image',filename)
           
          try{
-             await axios.post("http://localhost:3001/marketing/addmember",data)
+             await axios.post("https://goldling.herokuapp.com/marketing/addmember",data)
              setnotify({isOpen:true,message:"New Marketing Consultant Added Successfully",type:"success"});
       
                 

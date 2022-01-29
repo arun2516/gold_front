@@ -17,11 +17,11 @@ function Enquirypage() {
 
 
     useEffect(async()=>{
-      const response = await axios.get("http://localhost:3001/marketing/getmembers");
+      const response = await axios.get("https://goldling.herokuapp.com/marketing/getmembers");
       const data = response.data.map(elem=> elem.name);
       setmembers(data);
 
-      const response2 = await axios.get("http://localhost:3001/enquiry/getcontactus");
+      const response2 = await axios.get("https://goldling.herokuapp.com/enquiry/getcontactus");
       setenquirylist(response2.data);
 
     },[del])
@@ -36,7 +36,7 @@ function Enquirypage() {
 
       const handleclick1 = async(id)=>{
         try{
-          await axios.delete(`http://localhost:3001/enquiry/deletecontactus/${id}`);
+          await axios.delete(`https://goldling.herokuapp.com/enquiry/deletecontactus/${id}`);
           setnotify({isOpen:true,message:"Enquiry deleted Successfully",type:"success"});
           setdel(del+1)
         }catch(err){
@@ -51,7 +51,7 @@ function Enquirypage() {
           if(elem._id == id) return elem
         })
         try{
-         await axios.post("http://localhost:3001/contact/postassign", {
+         await axios.post("https://goldling.herokuapp.com/contact/postassign", {
           name:data[0].name,
           city:data[0].city,
           email:data[0].email,
@@ -67,7 +67,7 @@ function Enquirypage() {
         }
 
         try{
-         await axios.delete(`http://localhost:3001/enquiry/deletecontactus/${id}`)
+         await axios.delete(`https://goldling.herokuapp.com/enquiry/deletecontactus/${id}`)
          setdel(del+1)
       }catch(err){
         console.log(err);

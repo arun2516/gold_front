@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import { MenuItems } from './MenuItems';
 import './Dropdown.css';
 import { Link } from 'react-router-dom';
-import jwt_decode from "jwt-decode";
-import {useNavigate} from "react-router-dom";
-import Notification from "./Notification";
+
 
 function Dropdown() {
   
