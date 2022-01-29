@@ -50,7 +50,6 @@ export default function Adminlogin() {
         seterror("");
          await localStorage.setItem('admintoken',response.data);
          history('/adminpage');
-         window.location.reload();
       }
     }catch(err){
       seterror("***Username/Password is wrong***");
