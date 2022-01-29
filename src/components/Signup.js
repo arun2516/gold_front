@@ -33,6 +33,8 @@ const theme = createTheme();
 export default function SignUp() {
 
   const[notify,setnotify] = useState({isOpen:false,message:'',type:''})
+
+
   const handleSubmit = async(event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -52,6 +54,8 @@ export default function SignUp() {
       setnotify({isOpen:true,message:"Error in Creating Account PLease Check All The Field",type:"error"})
     }
   };
+
+  
 
   return (
     <ThemeProvider theme={theme}>

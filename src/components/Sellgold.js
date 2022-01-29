@@ -40,7 +40,7 @@ function Sellgold() {
             </div>
             <div style={{display:"flex",height:"60vh", backgroundColor:"whitesmoke", paddingLeft:"10%", paddingRight:"10%"}}>
                 <div style={{marginTop:"8%"}}>
-                    <img src={welcome} style={{borderRadius:"2%"}} />
+                    <img  alt="" src={welcome} style={{borderRadius:"2%"}} />
                 </div>
                 <div style={{marginTop:"5%", marginLeft:"3%"}}>
                     <h3 style={{color:"goldenrod", marginBottom:"2%"}}>Why GOLDLING?</h3>
@@ -115,7 +115,7 @@ function Sellgold() {
 
                 <div style={{display:"flex",height:"60vh",marginTop:"5%", backgroundColor:"whitesmoke",paddingLeft:"10%", paddingRight:"10%"}}>
                 <div >
-                    <img src={goldsell1} style={{borderRadius:"2%", height:"80%", marginTop:"7%"}} />
+                    <img alt="" src={goldsell1} style={{borderRadius:"2%", height:"80%", marginTop:"7%"}} />
                 </div>
                 <div style={{marginTop:"2%", marginLeft:"3%"}}>
                     <h3 style={{color:"goldenrod", marginBottom:"2%"}}>Selling your gold jewels, bars, coins at GJL is very simple. If you have gold or silver jewels on your hand, following is the process</h3>
@@ -141,12 +141,12 @@ function Sellgold() {
                     <Typography style={{marginTop:"2%",marginBottom:"2%"}}>5.Sign the sales agreement and get the balance Cash/ Cheque/ RTGS immediately.</Typography> <hr></hr>
                 </div>
                 <div >
-                    <img src={goldsell2} style={{borderRadius:"2%", height:"80%", marginTop:"7%", marginLeft:"4%"}} />
+                    <img alt="" src={goldsell2} style={{borderRadius:"2%", height:"80%", marginTop:"7%", marginLeft:"4%"}} />
                 </div>
                 </div>
                 <div style={{display:"flex",height:"60vh",marginTop:"0%", backgroundColor:"whitesmoke",paddingLeft:"10%", paddingRight:"10%"}}>
                 <div >
-                    <img src={goldsell3} style={{borderRadius:"2%", height:"90%", marginTop:"7%"}} />
+                    <img alt="" src={goldsell3} style={{borderRadius:"2%", height:"90%", marginTop:"7%"}} />
                 </div>
                 <div style={{marginTop:"7%", marginLeft:"4%"}}>
                     <h2 style={{color:"goldenrod", marginBottom:"2%"}}>Documents Required:</h2>

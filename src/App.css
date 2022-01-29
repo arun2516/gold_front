@@ -41,3 +41,26 @@
     margin-left: 25px;
 }
 
+.consultant-list{
+    padding-top: 2%;
+    display: flex;
+    flex-wrap: wrap; 
+     justify-content: space-evenly;
+    gap:25px;
+}
+
+.consultant-container{
+    width: 340px;
+}
+
+.consultant-poster{
+    height:500px;
+    width:340px;
+    object-fit: cover;
+}
+
+.consultant-spec{
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+}

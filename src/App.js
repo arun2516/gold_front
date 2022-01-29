@@ -10,6 +10,8 @@ import Adminlogin from './components/Adminlogin';
 import Adminpage from './components/Adminpage';
 import Contactus from './components/Contactus';
 import Sellgold from './components/Sellgold';
+import Enquirypage from './components/Enquirypage';
+import Marketingteam from './components/Marketingteam';
 
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
        <Route exact path="/" element={<Home/>}/>
        <Route path="/admin" element={<Adminlogin/>}/>
        <Route path="/adminpage" element={(admintoken?<Adminpage/>:<Navigate replace to="/admin"/>)}/>
+       <Route path="/enquirypage" element={(admintoken?<Enquirypage/>:<Navigate replace to="/admin"/>)}/>
+       <Route path="/marketingteam" element={(admintoken?<Marketingteam/>:<Navigate replace to="/admin"/>)}/>
        <Route path="/login" element={<Login/>}/>
        <Route path="/signup" element={<SignUp/>}/>
        <Route path="/forget" element ={<Forget/>}/>
