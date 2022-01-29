@@ -26,7 +26,6 @@ function Adminpage() {
      
     },[])
 
-    console.log(userdata);
     
     const closeMobileMenu1 = () => {
     localStorage.removeItem('token');
@@ -68,7 +67,6 @@ function Adminpage() {
         }
     }
       )
-      console.log(response.data);
      
       if(response.data._id){
         setnotify({isOpen:true,message:`New Price for ${state} is updated Successfully`,type:"success"})

@@ -27,7 +27,7 @@ function Marketingteam() {
       const response2 = await axios.get("http://localhost:3001/contact/getassign");
       setassign(response2.data)
     },[notify])
- console.log(assign)
+
     
 
     const closeMobileMenu1 = () => {

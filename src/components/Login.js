@@ -45,7 +45,6 @@ export default function Login() {
         email:data.get('email'),
         password: data.get('password')
       })
-      console.log(response.data)
       if(response.data){
         seterror("");
          await localStorage.setItem('token',response.data);

@@ -32,7 +32,6 @@ const theme = createTheme();
 export default function Newpassword() {
   const[notify,setnotify] = useState({isOpen:false,message:'',type:''})
   const{token} = useParams();
-  console.log(token);
   
   const handleSubmit = async(event) => {
     event.preventDefault();

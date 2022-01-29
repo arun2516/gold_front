@@ -14,7 +14,6 @@ function Home() {
 
     useEffect(async() => {
         var response = await axios.get("http://localhost:3001/all/goldata");
-        console.log(response.data)
         setresponse(response.data)
     }, [])
 
