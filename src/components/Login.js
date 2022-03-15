@@ -140,18 +140,19 @@ export default function Login() {
                 </Grid>
               </Grid>
               <Copyright sx={{ mt: 5 }} />
-            </Box>
-          </Box>
-        </Grid>
-      </Grid>
-    </ThemeProvider>
-        <div>
+                <div>
         <h1 style={{textAlign: 'center',marginTop:"3%"}}>
           User Credential
         </h1>
         <h5 style={{textAlign: 'center'}}>Email: raja31@gmail.com</h5>
         <h5 style={{textAlign: 'center', marginRight:"4%"}}>Password: 12345678</h5>
       </div>
+            </Box>
+          </Box>
+        </Grid>
+      </Grid>
+    </ThemeProvider>
+      
     </div>
   );
 }
