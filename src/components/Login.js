@@ -57,6 +57,7 @@ export default function Login() {
   };
 
   return (
+    <div>
     <ThemeProvider theme={theme} >
       <Grid container component="main" sx={{ height: '100vh' }}>
         <CssBaseline />
@@ -96,7 +97,7 @@ export default function Login() {
                 required
                 fullWidth
                 id="email"
-                label="Email Address:(raja31@gmail.com)"
+                label="Email Address:"
                 name="email"
                 autoComplete="email"
                 autoFocus
@@ -106,7 +107,7 @@ export default function Login() {
                 required
                 fullWidth
                 name="password"
-                label="Password(12345678)"
+                label="Password:"
                 type="password"
                 id="password"
                 autoComplete="current-password"
@@ -144,5 +145,13 @@ export default function Login() {
         </Grid>
       </Grid>
     </ThemeProvider>
+        <div>
+        <h1 style={{textAlign: 'center',marginTop:"3%"}}>
+          User Credential
+        </h1>
+        <h5 style={{textAlign: 'center'}}>Email: raja31@gmail.com</h5>
+        <h5 style={{textAlign: 'center', marginRight:"4%"}}>Password: 12345678</h5>
+      </div>
+    </div>
   );
 }
